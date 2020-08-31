@@ -9,8 +9,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@mdi/font": "^5.5.55",
     "element-ui": "^2.13.2",
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "nuxt-material-design-icons": "^1.0.4",
+    "vue-masked-input": "^0.5.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.1"
+  }
 }

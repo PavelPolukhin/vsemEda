@@ -29,7 +29,9 @@ export default {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '~node_modules/@mdi/font/css/materialdesignicons.css',
+    { src: '~assets/styles/main.scss', lang: 'sass' },
   ],
   /*
   ** Plugins to load before mounting the App
@@ -52,6 +54,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+
   ],
   /*
   ** Build configuration
