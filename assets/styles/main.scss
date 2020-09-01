@@ -6,9 +6,21 @@ html, body{
   padding: 0;
   margin: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Regular'), local('Proxima-Nova-Regular'),
+  url('/static/fonts/ProximaNova-Regular.woff2') format('woff2'),
+  url('/static/fonts/ProximaNova-Regular.woff') format('woff'),
+  url('/static/fonts/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 *{
-  font-family: proxima-nova, sans-serif;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 #__nuxt, #__layout, .nuxt-wrapper, .main-container{
   display: flex;
@@ -47,7 +59,6 @@ $green: #9CCB3B;
         }
       }
       &-title{
-        font-weight: 600;
         font-size: 18px;
         line-height: 22px;
       }
@@ -75,6 +86,7 @@ $green: #9CCB3B;
         background: #FFFFFF;
         box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.08);
         border-radius: 0 0 10px 10px;
+        z-index: 99;
         &__item{
           display: flex;
           align-items: center;
@@ -111,7 +123,7 @@ $green: #9CCB3B;
   align-items: center;
   max-width: 450px;
   width: 100%;
-  margin-left: auto;
+  margin-left: 149px;
   margin-right: auto;
   position: relative;
   input{
@@ -130,7 +142,7 @@ $green: #9CCB3B;
   }
   .results{
     position: absolute;
-    top: 100%;
+    top: 64px;
     box-shadow: 2px 6px 20px rgba(119, 119, 119, 0.18);
     border-radius: 5px;
     background-color: white;
@@ -170,6 +182,9 @@ $green: #9CCB3B;
       outline: none;
       border-color: transparent;
     }
+    &::placeholder{
+      color: #000000;
+    }
   }
   .el-input__prefix{
     font-size: 22px;
@@ -180,6 +195,7 @@ $green: #9CCB3B;
 .navBar-container{
   background: $green;
   display: flex;
+  margin-bottom: 39px;
   .navBar{
     margin-left: auto;
     margin-right: auto;
@@ -355,6 +371,145 @@ $green: #9CCB3B;
         color: black;
         text-decoration: none;
       }
+    }
+  }
+}
+/*---SLIDER---*/
+.slider-container{
+  background-color: white;
+  .slider{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    width: 100%;
+    &__header{
+      margin-bottom: 39px;
+    }
+  }
+  .hooper-list, .hooper{
+    height: 340px;
+    background-color: white;
+    &:focus, :active{
+      border: none;
+      outline: none;
+    }
+  }
+  .hooper-track{
+    background-color: white;
+    &:focus, :active{
+      border: none;
+      outline: none;
+    }
+  }
+  .slide-wrapper{
+    padding: 7.5px;
+    background-color: white;
+  }
+  .slide{
+    width: 100%;
+    height: 327px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    &__top{
+      position: relative;
+      height: 246px;
+      img{
+        width: 100%;
+        height: 246px;
+      }
+      .favorites{
+        position: absolute;
+        bottom: 19px;
+        right: 44px;
+        cursor: pointer;
+        img{
+          height: 28px;
+          width: 28px;
+        }
+      }
+    }
+    &__bottom{
+      padding: 8px 28px 15px 25px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      .name{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+        margin-bottom: 10px;
+      }
+      .row{
+        display: flex;
+        align-items: center;
+      }
+      .delivery-price, .delivery-time, .minimal-price{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #2C2C2C;
+        display: flex;
+        align-items: center;
+        background: #F4F4F4;
+        border-radius: 4px;
+        margin-right: 23px;
+        padding: 5px;
+        img{
+          margin-right: 7px;
+        }
+      }
+    }
+    .rate{
+      width: 57px;
+      height: 57px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #9CCB3B;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+  .hooper-prev{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F3F3F3;
+    border-radius: 50%;
+    right: 60px;
+    left: auto;
+    top: -39px;
+    &:focus, :active{
+      border: none;
+      outline: none;
+    }
+  }
+  .hooper-next{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F3F3F3;
+    border-radius: 50%;
+    right: 0;
+    left: auto;
+    top: -39px;
+    &:focus, :active{
+      border: none;
+      outline: none;
     }
   }
 }

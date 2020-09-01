@@ -6,7 +6,7 @@
     <div class="actions">
       <div class="dropdown-container" v-if="login_status">
         <div class="dropdown-icon" @click="dropdown = !dropdown">
-          <i class="mdi mdi-account-outline" ></i>
+          <img src="@/static/images/lc.png" alt="">
         </div>
         <div class="dropdown" v-if="dropdown">
           <div class="dropdown__item">
@@ -32,7 +32,7 @@
         <div class="login-title">Войти</div>
       </div>
       <div class="basket">
-          <i class="mdi mdi-basket"></i>
+        <img src="@/static/images/basket.svg" alt="">
       </div>
     </div>
   </div>

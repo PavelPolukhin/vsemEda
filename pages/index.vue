@@ -3,6 +3,7 @@
     <HeaderMain/>
     <NavBar/>
     <DialogLogin/>
+    <Slider/>
   </div>
 </template>
 

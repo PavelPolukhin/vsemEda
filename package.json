@@ -11,6 +11,7 @@
   "dependencies": {
     "@mdi/font": "^5.5.55",
     "element-ui": "^2.13.2",
+    "hooper": "^0.3.4",
     "nuxt": "^2.14.0",
     "nuxt-material-design-icons": "^1.0.4",
     "vue-masked-input": "^0.5.2"
